@@ -24,7 +24,7 @@ used during experimentation for my IA. More information on either version is lis
 
 For anyone who simply wants to see how the program works, opening `Static Site\index.html`
 in your browser after cloning the repository will open the project without the data recording functionalities
-that requires Django.
+that requires Django. [The static site is also hosted on Github Pages.](https://staticallytypedrice.github.io/Color-Switch-Read-Test/Static%20Site/)
 
 ## The Django Project
 
