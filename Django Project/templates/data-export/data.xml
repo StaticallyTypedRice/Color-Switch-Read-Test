@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Color Switch Read Test: Results -->
+<!--
+Options:
+
+The information in this document can be customized using GET variables
+Set	`order` to 'newest' or 'oldest' to newest or oldest first respectively. Any other value or excluding the variable defaults to 'newest'.
+Set `show_discarded` to 'true' to include discarded trials. Any other value or excluding the variable defaults to excluding discarded trials.
+
+Specifying no variables defaults to ordering by oldest first and excluding discarded trials.
+
+Example: /data.xml?order=newest&show_discarded=true
+-->
+
+<csrt order="{{ order }}" show_discarded="{% if show_discarded %}true{% else %}false{% endif %}" time_generated="{{ time_generated }}">
+	{% for trial in trials %}
+	<trial id="{{ trial.id }}" discard="{% if trial.discard %}true{% else %}false{% endif %}" name="{{ trial.name }}">
+		<stage_order>{{ trial.stage_order }}</stage_order>
+		<stage number="0" textblock="{{ trial.control }}" time="{{ trial.control_time }}" errors="{{ trial.control_errors }}" />
+		<stage number="1" textblock="{{ trial.stage_1 }}" time="{{ trial.stage_1_time }}" errors="{{ trial.stage_1_errors }}" />
+		<stage number="2" textblock="{{ trial.stage_2 }}" time="{{ trial.stage_2_time }}" errors="{{ trial.stage_2_errors }}" />
+		<stage number="3" textblock="{{ trial.stage_3 }}" time="{{ trial.stage_3_time }}" errors="{{ trial.stage_3_errors }}" />
+		<stage number="4" textblock="{{ trial.stage_4 }}" time="{{ trial.stage_4_time }}" errors="{{ trial.stage_4_errors }}" />
+		<stage number="5" textblock="{{ trial.stage_5 }}" time="{{ trial.stage_5_time }}" errors="{{ trial.stage_5_errors }}" />
+		<comments>{{ trial.comments }}</comments>
+		<time_created>{{ trial.time_created }}</time_created>
+	</trial>
+	{% endfor %}
+</csrt>

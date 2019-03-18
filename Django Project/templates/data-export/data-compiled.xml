@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Color Switch Read Test: Compiled Results -->
+
+<csrt-compiled time_generated="{{ time_generated }}">
+	{% for trial in trials %}
+    <trial name="{{ trial.name }}">
+		<testgroup number="0" time="{{ trial.control_time }}" errors="{{ trial.control_errors }}" />
+		<testgroup number="1" time="{{ trial.test_group_1_time }}" errors="{{ trial.test_group_1_errors }}" />
+		<testgroup number="2" time="{{ trial.test_group_2_time }}" errors="{{ trial.test_group_2_errors }}" />
+		<testgroup number="3" time="{{ trial.test_group_3_time }}" errors="{{ trial.test_group_3_errors }}" />
+		<testgroup number="4" time="{{ trial.test_group_4_time }}" errors="{{ trial.test_group_4_errors }}" />
+		<testgroup number="5" time="{{ trial.test_group_5_time }}" errors="{{ trial.test_group_5_errors }}" />
+		<comments>{{ trial.comments }}</comments>
+		<time_created>{{ trial.time_created }}</time_created>
+	</trial>
+    {% endfor %}
+</csrt-compiled>

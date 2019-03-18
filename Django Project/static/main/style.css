@@ -1,0 +1,81 @@
+/*
+    Color Switch Read Test
+
+    Main CSS File
+
+    Developed by Richie Zhang
+    For IB Biology Internal Assessment
+*/
+
+html {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: arial;
+}
+a {
+    color: #fe9100;
+}
+
+#introduction-wrap {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 125px;
+    width: 90%;
+}
+.introduction {
+    background-color: #383838;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+.flash-warning {
+    font-weight: bold;
+    border: 1px solid #ff6060;
+    color: #ff6060;
+    padding: 5px;
+}
+
+
+#color1, #color2 {
+    width: 50px;
+}
+#test-text {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+#text {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 150px;
+    width: 90%;
+}
+#text span {
+    font-size: 50px;
+    white-space: pre-wrap;
+}
+
+#instructions {
+	max-width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+	width: 90%;
+	display: none;
+}
+#instructions span {
+	display: block;
+	font-size: 20px !important;
+	margin-bottom: 15px;
+}
+
+#trial-comments {
+	width: 100%;
+	height: 30px;
+	display: block;
+}

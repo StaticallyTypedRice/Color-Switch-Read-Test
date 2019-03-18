@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9864dd9a-beb1-4bdc-970d-d9b31977bf7e}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+    <UseIISExpress>true</UseIISExpress>
+    <Name>Color Switch Read Test</Name>
+    <PythonRunWebServerCommandArguments>runserver</PythonRunWebServerCommandArguments>
+    <PythonDebugWebServerCommandArguments>runserver</PythonDebugWebServerCommandArguments>
+    <CommandLineArguments>runserver</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="csrt\settings.py" />
+    <Compile Include="csrt\urls.py" />
+    <Compile Include="csrt\wsgi.py" />
+    <Compile Include="csrt\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="record_data\admin.py" />
+    <Compile Include="record_data\api.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="record_data\apps.py" />
+    <Compile Include="record_data\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="record_data\migrations\__init__.py" />
+    <Compile Include="record_data\models.py" />
+    <Compile Include="record_data\tests.py" />
+    <Compile Include="record_data\views.py" />
+    <Compile Include="record_data\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="csrt" />
+    <Folder Include="record_data" />
+    <Folder Include="record_data\migrations" />
+    <Folder Include="static\" />
+    <Folder Include="static\main\" />
+    <Folder Include="templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="static\main\ajax-csrftoken.js" />
+    <Content Include="static\main\data-edit.js" />
+    <Content Include="static\main\switcher.js" />
+    <Content Include="static\main\jquery-3.0.0.min.js" />
+    <Content Include="static\main\style.css" />
+    <Content Include="templates\data-edit.html" />
+    <Content Include="templates\data-list.html" />
+    <Content Include="templates\index.html" />
+    <Content Include="templates\data.xml" />
+    <Content Include="runserver.bat" />
+    <Content Include="setup.bat" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>True</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,64 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="{% static 'jquery-3.0.0.min.js' %}"></script>
+	<script src="{% static 'ajax-csrftoken.js' %}"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<style>
+		/* Styling for the table */
+		tr a {
+			display: block;
+		}
+		tr:nth-child(even) {
+			background-color: #f7f7f7;
+		}
+		.discarded {
+			font-weight: bold;
+			color: #ff0000;
+		}
+	</style>
+
+	<title>All Data | CSRT</title>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h2>All Data</h2>
+		</div>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Name</td>
+					<td>Time Created</td>
+					<td>Discarded</td>
+				</tr>
+			</thead>
+			{% for trial in trials %}
+			<tr>
+				<td>{{ trial.id }}</td>
+				<td><a href="/data/edit/{{ trial.id }}/">{{ trial.name }}</a></td>
+				<td>{{ trial.time_created }}</td>
+				<td>{% if trial.discard %}<span class="discarded">Discarded</span>{% endif %}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		<div class="row">
+			<a href="/export/time/" target="_blank" class="col col-xs-3">Export Time</a>
+			<a href="/export/errors/" target="_blank" class="col col-xs-3">Export Errors</a>
+			<a href="/export/compiled/" target="_blank" class="col col-xs-3">Export Compiled Data</a>
+			<a href="/export/" target="_blank" class="col col-xs-3">Export All Data</a>
+		</div>
+	</div>
+</body>
+</html>
